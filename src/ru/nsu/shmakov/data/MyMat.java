@@ -75,6 +75,23 @@ public class MyMat implements Cloneable {
         }
         return result;
     }
+
+    public Point3D multiplex(Point3D point) {
+        Double[] res = new Double[4];
+        Double[] vect = new Double[4];
+        vect[0] = point.x; vect[1] = point.y; vect[2] = point.z; vect[3] = point.a;
+
+
+
+        for (int i = 0; i < 4; i++) {
+            double tmp = 0;
+            for (int j = 0; j < 4; j++) {
+                tmp += this.mat[j][i]*vect[j];
+            }
+            res[i] = new Double(tmp);
+        }
+        return new Point3D(res[0], res[1], res[2], res[3]);
+    }
     
     public MyMat transposition() {
         MyMat result = new MyMat();
