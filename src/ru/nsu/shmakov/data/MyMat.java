@@ -114,4 +114,13 @@ public class MyMat implements Cloneable {
         return sb.toString();
     }
 
+    public static MyMat getIdentity() {
+        MyMat result = new MyMat();
+        result.set(0, 0, 1.);
+        result.set(1, 1, 1.);
+        result.set(2, 2, 1.);
+        result.set(3, 3, 1.);
+        return result;
+    }
+
 }

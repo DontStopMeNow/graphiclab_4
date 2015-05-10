@@ -33,7 +33,7 @@ public class MatViewCreator {
         result.set(3, 2, new Double(0));
         result.set(3, 3, new Double(1));
 
-        result.set(0, 3,  xaxis.dot3(camera.getPosition()));
+        result.set(0, 3, -xaxis.dot3(camera.getPosition()));
         result.set(1, 3, -yaxis.dot3(camera.getPosition()));
         result.set(2, 3, -zaxis.dot3(camera.getPosition()));
 

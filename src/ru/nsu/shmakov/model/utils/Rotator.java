@@ -1,6 +1,8 @@
 package ru.nsu.shmakov.model.utils;
 
+import ru.nsu.shmakov.data.Edge3D;
 import ru.nsu.shmakov.data.MyMat;
+import ru.nsu.shmakov.data.Point3D;
 
 /**
  * Created by kyb1k on 28.04.2015.

@@ -11,13 +11,13 @@ public class Camera {
     public Camera(Point3D position, Point3D lookAt) {
         this.position = position;
         this.lookAt = lookAt;
-        this.up       = new Point3D(new Double(0), new Double(1), new Double(0), new Double(0));
+        this.up       = new Point3D(new Double(0), new Double(1), new Double(0), new Double(1));
     }
 
     public Camera(double x1, double y1, double z1, double x2, double y2, double z2) {
-        this.position = new Point3D(x1, y1, z1, new Double(0));
-        this.lookAt   = new Point3D(x2, y2, z2, new Double(0));
-        this.up       = new Point3D(new Double(0), new Double(1), new Double(0), new Double(0));
+        this.position = new Point3D(x1, y1, z1, new Double(1));
+        this.lookAt   = new Point3D(x2, y2, z2, new Double(1));
+        this.up       = new Point3D(new Double(0), new Double(0), new Double(1), new Double(1));
     }
 
     public Point3D getPosition() {

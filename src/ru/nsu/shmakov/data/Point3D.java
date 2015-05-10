@@ -16,11 +16,11 @@ public class Point3D implements Cloneable {
         this.a = a;
     }
     public Point3D sum(Point3D another) {
-        return new Point3D(this.x + another.x, this.y + another.y, this.z + another.z, this.a + another.a);
+        return new Point3D(this.x + another.x, this.y + another.y, this.z + another.z, 1.);
     }
 
     public Point3D sub(Point3D another) {
-        return new Point3D(this.x - another.x, this.y - another.y, this.z - another.z, this.a - another.a);
+        return new Point3D(this.x - another.x, this.y - another.y, this.z - another.z, 1.);
     }
 
     public boolean equals(Point3D another) {
@@ -41,8 +41,8 @@ public class Point3D implements Cloneable {
     }
 
     public Point3D normalize3() {
-        Double k = length4();
-        return new Point3D(x/k, y/k, z/k, new Double(0));
+        Double k = length3();
+        return new Point3D(x/k, y/k, z/k, new Double(1));
     }
 
     public Double dot3(Point3D another) {
@@ -51,7 +51,7 @@ public class Point3D implements Cloneable {
     }
 
     public Point3D cross3(Point3D another) {
-        return new Point3D(this.y*another.z - this.z*another.y, this.x*another.z - this.z*another.x, this.x*another.y - this.y*another.x, new Double(0));
+        return new Point3D((this.y*another.z - this.z*another.y), (this.x*another.z - this.z*another.x), (this.x*another.y - this.y*another.x), new Double(1));
     }
 
     public Object clone() {
